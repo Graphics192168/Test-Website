@@ -1,71 +1,168 @@
-<style>
-  .title {
-    font-size: 40px;
-    font-weight: bold;
-  }
-
-  .link {
-    color: rgb(0, 113, 133);
-    font-size: 28px;
-  }
-
-  .stock {
-    color: rgb(0, 118, 0);
-    font-size: 25px;
-    font-weight: bold;
-  }
-
-  .delivery {
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  .cart {
-    background-color: rgb(255, 216, 20);
-    border: none;
-    height: 50px;
-    width: 210px;
-    border-radius: 25px;
-    font-size: 22.5px;
-    cursor: pointer;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShoeStore</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
     }
 
-    .buy {
-    background-color: rgb(255, 164, 28);
-    border: none;
-    height: 50px;
-    width: 210px;
-    border-radius: 25px;
-    font-size: 22.5px;
-    margin-left: 8px;
-    cursor: pointer;
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-</style>
 
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
 
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+    }
 
+    .hero {
+      background: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
 
+    .hero h2 {
+      font-size: 48px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 8px;
+    }
 
-<a href="https://amazon.in" target="_blank" class="link">
-  Back to Amazon
-</a>
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
 
-<p class="title">
-  Nike Black Running Shoes
-</p>
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
 
-<p class="stock">
-  $39 - in stock.
-</p>
+    .product-card:hover {
+      transform: scale(1.03);
+    }
 
-<p class="delivery">
-  Free delivery tomorrow
-</p>
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
 
-<button class="cart">
-  Add to Cart
-</button>
+    .product-card .details {
+      padding: 15px;
+    }
 
-<button class="buy">
-  Buy now
-</button>
+    .product-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .product-card p {
+      margin: 0 0 15px;
+      color: #666;
+    }
+
+    .product-card button {
+      background-color: #000;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .product-card button:hover {
+      background-color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ShoeStore</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Step into Style</h2>
+  </div>
+
+  <section class="products">
+    <div class="product-card">
+      <img src="https://neemans.com/cdn/shop/files/ND_-_Urban_Casuals_-_Fusion_Black_-_Web_Optimized_e_a3cd7aea-e157-42f0-80e7-5fda2c23675e.jpg?v=1739883933&width=800" alt="Sneaker">
+      <div class="details">
+        <h3>Urban Sneakers</h3>
+        <p>$89.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://neemans.com/cdn/shop/files/ND_-_Urban_Casuals_-_Fusion_Black_-_Web_Optimized_e_a3cd7aea-e157-42f0-80e7-5fda2c23675e.jpg?v=1739883933&width=800" alt="Running Shoes">
+      <div class="details">
+        <h3>Runner Pro</h3>
+        <p>$109.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://neemans.com/cdn/shop/files/ND_-_Urban_Casuals_-_Fusion_Black_-_Web_Optimized_e_a3cd7aea-e157-42f0-80e7-5fda2c23675e.jpg?v=1739883933&width=800" alt="Casual Shoes">
+      <div class="details">
+        <h3>Classic Casual</h3>
+        <p>$74.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 ShoeStore. All rights reserved.
+  </footer>
+
+</body>
+</html>
